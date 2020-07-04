@@ -1,0 +1,13 @@
+node{
+    stage('clone'){
+        git 'https://github.com/Abbes07/gittest.git'
+    }
+    stage('build'){
+        sh label: '', script: 'javac src/main/java/myapp/App.java'
+    }
+    stage('run'){
+        sh label: '', script: 'java myapp/App'
+    }
+    
+    
+}
